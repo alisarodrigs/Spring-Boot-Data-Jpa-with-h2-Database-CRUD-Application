@@ -1,0 +1,105 @@
+****************************************************
+In postman, I gave these entries:-
+
+1. POST
+
+1.1
+http://localhost:8080/addUser
+Body:
+{
+        "name": "Daniel",
+        "address": "Denmark"
+    }
+
+1.2 
+http://localhost:8080/addUsers
+Body:
+[
+{
+        "id": 1,
+        "name": "Volga",
+        "address": "Germany"
+    },
+    {
+        "id": 2,
+        "name": "Alister",
+        "address": "USA"
+    },
+    {
+        "id": 3,
+        "name": "Maria",
+        "address": "South Korea"
+    },
+    {
+        "id": 4,
+        "name": "Lenny",
+        "address": "Canada"
+    }
+]
+------------------------------------------------
+2.GET
+
+2.1 http://localhost:8080/user/1
+Output:
+{
+        "id": 1,
+        "name": "Volga",
+        "address": "Germany"
+    }
+
+2.2 http://localhost:8080/users
+Output:
+
+[
+{
+        "name": "Daniel",
+        "address": "Denmark"
+    },
+{
+        "id": 1,
+        "name": "Volga",
+        "address": "Germany"
+    },
+    {
+        "id": 2,
+        "name": "Alister",
+        "address": "USA"
+    },
+    {
+        "id": 3,
+        "name": "Maria",
+        "address": "South Korea"
+    },
+    {
+        "id": 4,
+        "name": "Lenny",
+        "address": "Canada"
+    }
+]
+------------------------------------------------
+3. PUT
+http://localhost:8080/updateUser
+Body:
+{
+        "id": 1,
+        "name": "Volga",
+        "address": "Jamaica"
+    }
+------------------------------------------------
+
+4.DELETE
+http://localhost:8080/user/1
+Output:User Deleted
+
+****************************************************
+
+In Browser using h2
+
+link - http://localhost:8080/h2-console,
+Body: SELECT * FROM USER 
+Run: *table of filled values from postman*
+
+****************************************************
+
+View this youtube video for further details:
+https://www.youtube.com/watch?v=Flq7fQRjXx8
